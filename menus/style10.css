@@ -1,0 +1,36 @@
+
+ul{
+position: relative;
+display: flex;
+flex-direction: column;
+gap: 30px;
+}
+
+li{
+   position: relative;
+   list-style: none;
+}
+
+a{
+   position: relative;
+   font-size: 4em;
+   text-decoration: none;
+   letter-spacing: 2px;
+   line-height: 1em;
+   text-transform: uppercase;
+color: transparent;
+-webkit-text-stroke: 1px rgba(120, 29, 29, 0.5);
+}
+a:before{
+   content: attr(data-text);
+   position: absolute;
+   color: rgb(120, 29, 29);
+   border-right: 8px solid rgb(120, 29, 29);
+   width: 0;
+   overflow: hidden;
+   transition: 1s;
+}
+
+a:hover:before{
+   width: 100%;
+}

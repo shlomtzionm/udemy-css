@@ -1,0 +1,41 @@
+.card{
+    position: relative;
+    width: 300px;
+    height: 260px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: .3s;
+padding: 20px 30px;
+}
+
+
+.imgbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-60px);
+    z-index: 1;
+}
+
+img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card:hover{
+    height: 440px;
+}
+
+.content{
+    padding: 10px 20px;
+    text-align: center;
+    color: #111;
+    transition: .3s ;
+    transform: translateY(-200px);
+    opacity: 0;
+}
+
+.card:hover .content{
+opacity: 1;
+transform: translateY(-200px);
+}

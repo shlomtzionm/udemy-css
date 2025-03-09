@@ -1,0 +1,47 @@
+#_19 {
+  text-decoration: none;
+  width: 160px;
+  height: 60px;
+  color: black;
+  line-height: 60px;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 25px;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+#_19 span {
+  position: absolute;
+  width: 95%;
+  height: 90%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  border: 2px solid black;
+  z-index: -1;
+}
+
+#_19 span:before {
+  content: "";
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transition: all 0.1s;
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+#_19:hover span:before {
+  width: 100%;
+  background-color: black;
+  transform: translate(-50%, -50%) rotate(60deg);
+
+}
+
+#_19:hover {
+  color: white;
+}

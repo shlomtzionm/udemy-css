@@ -1,0 +1,39 @@
+#_9 {
+  padding: 20px 40px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: tomato;
+  font-size: 25px;
+  border: 2px solid tomato;
+  position: relative;
+transition: all .5s;
+text-transform: uppercase;
+cursor: pointer;
+background-color: transparent;
+overflow: hidden;
+}
+
+#_9:before {
+  content: "";
+  position: absolute;
+  bottom:  0;
+  left: 0;
+  width: 100%;
+  background-color: tomato;
+  z-index: -1;
+border-radius: 50% 50% 0 0;
+height: 0;
+transition: all .5s;
+}
+
+#_9:hover:before{
+  height: 190%;
+}
+
+#_9:hover{
+  color:white
+}
+
+
+
+

@@ -1,0 +1,52 @@
+
+
+#_3{
+  padding: 40px 80px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #262626;
+    font-size: 45px;
+    letter-spacing: 2px;
+    border: 5px solid #262626;
+    position: relative;
+}
+
+#_3:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+background-color: #262626;
+transition: 1s;
+transform: rotateX(90deg);
+z-index: -1;
+}
+
+#_3:hover:before{
+  transform:rotateX(0);
+  }
+
+  #_3:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+background-color: #262626;
+transition: 1s;
+transform: rotateY(90deg);
+z-index: -1;
+}
+
+
+  
+#_3:hover:after{
+  transform:rotateY(0);
+  }
+
+  #_3:hover{
+  color: white;
+}
