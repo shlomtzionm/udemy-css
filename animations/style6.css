@@ -1,0 +1,29 @@
+a{
+  text-decoration: none;
+  color: black;
+  font-family: sans-serif;
+  font-size: 40px;
+  border: 3px solid black;
+  padding: 40px 80px;
+  transition: all .3s;
+}
+
+a:hover{
+  border: 3px solid red;
+  color: red;
+  animation: shake .3s linear 1;
+}
+
+
+@keyframes shake{
+  33%{
+    transform: rotate(10deg);
+  }
+  66%{
+    transform: rotate(-10deg);
+  }
+
+  100%{
+    transform: rotate(10deg);
+  }
+}

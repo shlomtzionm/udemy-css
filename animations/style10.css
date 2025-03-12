@@ -1,0 +1,22 @@
+body{
+  background-color: #a8b7e0;
+}
+
+h1{
+  font-size: 200px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  background: url(bg-party.png);
+  -webkit-background-clip: text;
+  color: transparent;
+animation: text 20s linear infinite;
+}
+
+@keyframes text{
+  from{
+    background-position: 0 0 ;
+  } to{
+    background-position: 100% 100%;
+  }
+}

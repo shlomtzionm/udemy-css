@@ -1,0 +1,27 @@
+body {
+  background-color: #272727;
+}
+
+.slider {
+  width: 800px;
+  height: 400px;
+  background: url(bg-castl.jpg);
+  animation: change 10s linear infinite;
+}
+
+@keyframes change {
+  0% {
+    background: url(bg-castl.jpg);
+  }
+  20% {
+    background: url(bg-party.png);
+  }
+  40% { background: url(bg.jpg);
+  }
+  60% { background: url(car.png);
+  }
+  80% { background: url(motobike.png);
+  }
+  100% { background: url(rain.png);
+  }
+}

@@ -1,0 +1,14 @@
+.banner{
+  height: 100vh;
+  background: url(bg-party.png);
+  background-position: 0 0 ;
+  animation: animation 15s linear infinite;
+}
+
+@keyframes animation{
+  from{background-position: 0 0 ;}
+  to{
+    background-position:  800px 0;
+  }
+}
+
