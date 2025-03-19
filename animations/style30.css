@@ -1,0 +1,43 @@
+body {
+  background-color: #222;
+}
+
+.loader {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  animation: rotate 2s infinite linear;
+
+}
+
+.loader span:nth-child(1) {
+  border-radius: 30% 70% 70% 30% / 60% 44% 56% 40%;
+animation-direction: reverse;
+}
+
+.loader span:nth-child(2) {
+  border-radius: 59% 41% 30% 70% / 36% 44% 56% 64% ;
+animation-duration: 1.5s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
