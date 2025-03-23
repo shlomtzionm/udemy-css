@@ -1,0 +1,103 @@
+body {
+  background-color: #5093b0;
+  font-family: sans-serif;
+}
+.card {
+  position: relative;
+  width: 350px;
+  height: 85px;
+  background-color: #192a56;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.toggle {
+  position: absolute;
+  width: 70px;
+  height: 60px;
+  background-color: #192a56;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  cursor: pointer;
+}
+
+.toggle:before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  left: -34px;
+  border-top-right-radius: 35px;
+  box-shadow: 11px -10px 0 10px #192a56;
+}
+
+.toggle:after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  right: -34px;
+  border-top-left-radius: 35px;
+  box-shadow: -11px -10px 0 10px #192a56;
+}
+.toggle span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: 0.5s;
+}
+
+.card.active .toggle span {
+  transform: translate(-50%, -70%) rotate(225deg);
+}
+
+.card.active {
+  height: 420px;
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.contentBox {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+flex-direction: column;
+}
+.content .contentBox h2 {
+  color: white;
+  font-weight: 500;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  line-height: 1.1em;
+}
+.content .contentBox h2 span{
+  font-size: .75em;
+font-weight: 400;
+text-transform: capitalize;
+}
+
+.imageBox{
+  position: relative;width: 250px;height: 250px;
+margin-top: 20px;
+box-shadow: -10px 10px 10px rgba(0,0,0,0.15);
+border: 5px solid white;
+}

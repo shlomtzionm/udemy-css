@@ -1,0 +1,24 @@
+.card{
+    width: 500px;height: 250px;
+    background-color: #c7ecec;
+    padding: 20px 80px 20px 20px;
+    border-radius: 10px;
+    transition:  .5s;
+    clip-path: circle(8.6% at 77% 22%);
+
+
+}
+
+h1{
+    margin-bottom: 20px;
+
+}
+
+p{
+    font-size: 18px;
+}
+
+.card:hover{
+    clip-path: circle(72.2% at 50% 48%);
+
+}

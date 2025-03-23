@@ -1,93 +1,47 @@
-* {
-  box-sizing: border-box;
-  max-height: 100vh;
-}
-
 body {
-  background-color: #222;
-  overflow: hidden;
+  background-color: #010f1f;
 }
 
 .loader {
   position: relative;
-  width: 200px;
-  height: 200px;
-  z-index: -1;
-  animation: semi 4s ease-in-out infinite;
+  height: 120px;
+  width: 120px;
 }
 
-.loader:before {
+span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(18deg * var(--i)));
+}
+
+span:before {
   content: "";
   position: absolute;
-  width: 200px;
-  height: 100px;
-  background-color: #06c8f0;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-  bottom: 0;
-}
-
-.container {
-  position: relative;
-  transform: translateY(-100px);
-}
-
-.container:before {
-  content: "";
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background-color: white;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  top: 200px;
-  animation: circle 4s ease-in-out infinite;
+background-color: #00c3ff;
+box-shadow: 0 0 10px #00c3ff,
+0 0 20px #00c3ff,
+0 0 40px #00c3ff,
+0 0 60px #00c3ff,
+0 0 80px #00c3ff,
+0 0 100px #00c3ff;
+animation: loading 2s linear infinite;
+animation-delay: calc(0.1s * var(--i));
 }
 
-.container:after {
-  content: "";
-  position: absolute;
-  width: 800px;
-  height: 800px;
-  background-color: #fe4e4e;
-  border-radius: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 400px;
-}
 
-.ball {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background-color: white;
-  border-radius: 50%;
-top: 50%;
-transform: translateY(-100%) translateX(-40px);
-animation: ball 4s ease-in-out infinite;
-}
-
-@keyframes ball{
-  0%{transform: translateY(-100%) translateX(-40px);}
-  50%{transform: translateY(-100%) translateX(200px);}
-  100%{transform: translateY(-100%) translateX(-40px);}
-
-}
-
-@keyframes semi{
-  0%{transform: rotate(50deg);}
-  50%{transform: rotate(-50deg);}
-  100%{transform: translateY(50deg);}
-
-}
-
-@keyframes circle{
+@keyframes loading{
   0%{
-transform: translateX(15px);
+    transform: scale(1);
   }
-  50%{
-    transform: translateX(-15px);
-      }
-      100%{
-        transform: translateX(15px);
-          }
+  80%,100%{
+    transform: scale(0);
+  }
 }
